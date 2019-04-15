@@ -3,23 +3,27 @@
 
 <h1>Signup</h1>
 <!--Username-->
-<form name="signup">
+<form name="signup" action="/" method="POST">
     <table>
         <tr>
             <th>Username</th>
-            <th><input type="text" name="username"/></th>
+            <th><input type="text" name="username" value="{{username}}"/></th>
+            <th><p class="error">{{username_error}}</p></th>
         </tr>
         <tr>
             <th>Password</th>
-            <th><input type="password" name="password"/></th>    
+            <th><input type="password" name="password" value="{{password}}"/></th>
+            <th><p class="error">{{password_error}}</p></th>   
         </tr>
         <tr>
             <th>Verify Password</th>
-            <th><input type="password" name="verify"/></th>    
+            <th><input type="password" name="verify" value="{{verify}}"/></th> 
+            <th><p class="error">{{verify_error}}</p></th>   
         </tr>
         <tr>
             <th>Email (optional)</th>
-            <th><input type="text" name="email"/></th>    
+            <th><input type="text" name="email" value="{{email}}"/></th>
+            <th><p class="error">{{email_error}}</p></th>    
         </tr>
     </table>
     <input type="submit"/>
